@@ -3,6 +3,9 @@ import qs from 'qs';
 import StoreContext from '../../hooks/storeContext';
 import {useContext, useEffect} from 'react';
 
+import PropTypes from 'prop-types';
+
+
 export default function Checkbox({ category }){
     const {setFilter, selectedCategories, setSelectedCategories} =useContext(StoreContext);
 
@@ -17,7 +20,7 @@ export default function Checkbox({ category }){
             }
         })
         setFilter(import.meta.env.VITE_API_URL + "/products?populate=*&" + query);
-    },[selectedCategories])
+    },[selectedCategories, setFilter])
 
     const handleFilterCategory = (e) => {
         const selectedID = e.target.dataset.category
@@ -46,6 +49,13 @@ export default function Checkbox({ category }){
         </div>
     );
 }
+
+Checkbox.propTypes = {
+    category: PropTypes.shape({
+        id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+        title: PropTypes.string.isRequired
+    }).isRequired
+};
 
 
 

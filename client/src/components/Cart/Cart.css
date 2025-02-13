@@ -76,3 +76,14 @@
 .cart-item-remove {
     color: #c81414;
 }
+
+.cart-reset {
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.cart-reset:hover {
+    background-color: #c8c8c8;
+    color: #c81414;
+}

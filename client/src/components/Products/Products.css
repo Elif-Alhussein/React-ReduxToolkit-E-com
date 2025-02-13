@@ -23,11 +23,11 @@
     bottom: -140px;
     background-color: rgba(0,0,0,.8);
     padding: 15px;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .product .product-image:hover + .product-desc {
-    bottom: 6px;
+    bottom: 60px;
 }
 
 .product .product-price {
