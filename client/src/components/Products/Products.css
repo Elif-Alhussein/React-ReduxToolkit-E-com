@@ -1,0 +1,44 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.product {
+    position: relative;
+    overflow: hidden;
+}
+
+.product .product-image{
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.product .product-desc {
+    font-size: 0.8rem;
+    width: -webkit-fill-available;
+    position: absolute;
+    bottom: -140px;
+    background-color: rgba(0,0,0,.8);
+    padding: 15px;
+    transition: all .2s ease-in-out;
+}
+
+.product .product-image:hover + .product-desc {
+    bottom: 6px;
+}
+
+.product .product-price {
+    position: absolute;
+    right: 0;
+    background-color: rgb(163, 37, 15);
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px 10px;
+} 
+
+.product-btn {
+    display: block;   
+}
